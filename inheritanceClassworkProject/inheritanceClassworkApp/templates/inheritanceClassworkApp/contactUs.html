@@ -1,0 +1,34 @@
+{% extends 'inheritanceClassworkApp/base.html' %}
+
+{% block header %}
+
+<p>If you have any questions, comments, or concerns, we are happy to help.
+    Send us a message to start a conversation with us today.
+    1-901-229-1720​
+    88 Union Avenue
+    2nd Floor
+    Memphis, TN 38103
+    team@code-crew.org
+</p>
+
+{% endblock header %}
+
+{% block content %}
+    <h1>List of Contacts below:</h1>
+{% if allContacts %}
+
+{% for eachContact in allContacts %}
+    <li>{{eachContact.name}} {{eachContact.email}}</li>
+{% endfor %}
+
+{% else %}
+    <h3>See admin</h3>
+{% endif %}
+
+{% endblock content %}
+
+{% block footer %}
+<p>88 Union Avenue, 2nd Floor, Memphis, TN 38103  |  901-229-1720  | team@code-crew.org  |  #GritGrindCode
+
+</p>
+{% endblock footer %}

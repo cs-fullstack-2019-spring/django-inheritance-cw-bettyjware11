@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inheritanceClassworkApp/css/dealer.css' %}">
+</head>
+<body>
+
+<nav>
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'contactUs' %}">Contact Us</a>
+    <a href="{% url 'gallery' %}">Gallery</a>
+    <a href="{% url 'aboutUs' %}">About Us</a>
+    <a href="{% url 'resources' %}">Resources</a>
+</nav>
+
+{% block content %}
+
+{% endblock content %}
+
+
+{% block footer %}
+<p>88 Union Avenue, 2nd Floor, Memphis, TN 38103  |  901-229-1720  | team@code-crew.org  |  #GritGrindCode
+
+</p>
+{% end block footer %}
+
+
+
+</body>
+</html>
